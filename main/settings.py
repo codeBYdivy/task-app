@@ -37,9 +37,19 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    # 'django_extensions',
+    'rest_framework',
+    # 'rest_framework.authtoken',
+
+    'demand.apps.DemandConfig',
+    'employee.apps.EmployeeConfig',
 ]
 
 MIDDLEWARE = [
+    # 'corsheaders.middleware.CorsMiddleware',
+    # 'django.middleware.common.CommonMiddleware',
+
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -48,6 +58,32 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# REST_FRAMEWORK = {
+#     'DEFAULT_PERMISSION_CLASSES': (
+#         'rest_framework.permissions.IsAuthenticated',
+#     ),
+
+#     'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema',
+
+#     'DEFAULT_RENDERER_CLASSES': (
+#         'djangorestframework_camel_case.render.CamelCaseJSONRenderer',
+#         'rest_framework.renderers.BrowsableAPIRenderer',
+#         # Any other renders
+#     ),
+
+#     'DEFAULT_PARSER_CLASSES': (
+#         'djangorestframework_camel_case.parser.CamelCaseJSONParser',
+#         'rest_framework.parsers.FormParser',
+#         'rest_framework.parsers.MultiPartParser',
+#         # Any other parsers
+#     ),
+
+#     'JSON_UNDERSCOREIZE': {
+#         'no_underscore_before_number': True,
+#     },
+# }
+
 
 ROOT_URLCONF = 'main.urls'
 
