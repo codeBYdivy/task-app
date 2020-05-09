@@ -1,6 +1,7 @@
 from rest_framework import serializers
-from .models import Demand, Assignment
+
 from employee.models import Employee
+from .models import Assignment, Demand
 
 
 class EmployeeSerializer(serializers.ModelSerializer):
@@ -11,6 +12,7 @@ class EmployeeSerializer(serializers.ModelSerializer):
 
 class AssignmentSerializer(serializers.ModelSerializer):
     employee = EmployeeSerializer(many=False, read_only=True)
+
     # employee = serializers.CharField(source='employee.name', read_only=True)
 
     class Meta:

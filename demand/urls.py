@@ -1,6 +1,7 @@
-from django.urls import path, include
+from django.urls import include, path
 from rest_framework import routers
-from .views import DemandViewSet, AssignmentViewSet
+
+from .views import AssignmentViewSet, DemandViewSet
 
 router = routers.DefaultRouter()
 router.register('demands', DemandViewSet)

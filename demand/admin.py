@@ -1,4 +1,5 @@
 from django.contrib import admin
+
 from .models import Assignment, Demand, Holiday
 
 admin.site.register(Holiday)
